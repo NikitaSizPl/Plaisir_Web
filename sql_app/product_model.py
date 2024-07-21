@@ -23,5 +23,3 @@ class Item(Base):
     #  Зависимость таблицы к классу "Product"
     category_id = Column(Integer, ForeignKey('categories.id'))
     category = relationship("Category", back_populates="items")
-
-

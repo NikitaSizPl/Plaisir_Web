@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Depends
-from .database import SessionLocal, engine
+from sql_app.database import SessionLocal, engine
 from sqlalchemy.orm import Session
-from . import product_model, crud
+from sql_app import product_model, crud
 
 app = FastAPI()
 
@@ -17,19 +17,24 @@ def get_db():
         db.close()
 
 
-@app.get("/category/")
+@app.get("/", tags=['10 items'])
+async def ten_itims(db: Session = Depends(get_db)):
+    return None
+
+
+@app.get("/category/", tags=['all_category'])
 async def get_all_category(db: Session = Depends(get_db)):
     category = crud.get_all_category(db)
     return category
 
 
-@app.get("/category/{cat_id}/items/")
+@app.get("/category/{cat_id}/items/", tags=['all_in_one_category'])
 async def read_one_by_category(cat_id: int, db: Session = Depends(get_db)):
     only_one_category = crud.get_one_by_category(cat_id, db)
     return only_one_category
 
 
-@app.get("/category/{cat_id}/items/{item_id}")
-async def read_product_by_id(cat_name: str, item_id: int, db: Session = Depends(get_db)):
-    only_one_item_id = crud.get_product_by_id(cat_name, item_id, db)
+@app.get("/category/{cat_id}/items/{item_id}", tags=['one_in_one_category'])
+async def read_product_by_id(cat_id: int, item_id: int, db: Session = Depends(get_db)):
+    only_one_item_id = crud.get_product_by_id(cat_id, item_id, db)
     return only_one_item_id
