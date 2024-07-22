@@ -1,9 +1,13 @@
-from fastapi import FastAPI, Depends, HTTPException
+from fastapi import FastAPI, Depends, HTTPException, Request
+from starlette.templating import Jinja2Templates
+
 from sql_app.database import SessionLocal, engine
 from sqlalchemy.orm import Session
 from sql_app import product_model, crud
+from fastapi.responses import HTMLResponse
 
 app = FastAPI()
+templates = Jinja2Templates(directory="templates")
 
 product_model.Base.metadata.create_all(bind=engine)
 
@@ -17,9 +21,9 @@ def get_db():
         db.close()
 
 
-@app.get("/", tags=['10 items'])
-async def ten_itims(db: Session = Depends(get_db)):
-    return None
+@app.get("/", tags=['Home'], response_class=HTMLResponse)
+async def ten_itims(request: Request):
+    return templates.TemplateResponse("base.html", {"request": request, "name": "FastAPI"})
 
 
 @app.get("/category/", tags=['all_category'])
