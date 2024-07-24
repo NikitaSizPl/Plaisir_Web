@@ -1,12 +1,17 @@
 from fastapi import FastAPI, Depends, HTTPException, Request
 from starlette.templating import Jinja2Templates
-
+from fastapi.staticfiles import StaticFiles
 from sql_app.database import SessionLocal, engine
 from sqlalchemy.orm import Session
 from sql_app import product_model, crud
 from fastapi.responses import HTMLResponse
 
 app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+
+# Настраиваем шаблоны
 templates = Jinja2Templates(directory="templates")
 
 product_model.Base.metadata.create_all(bind=engine)
