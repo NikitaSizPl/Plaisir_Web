@@ -10,7 +10,6 @@ app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-
 # Настраиваем шаблоны
 templates = Jinja2Templates(directory="templates")
 
@@ -28,15 +27,15 @@ def get_db():
 
 @app.get("/", tags=['Home'], response_class=HTMLResponse)
 async def ten_itims(request: Request):
-    return templates.TemplateResponse("base.html", {"request": request, "name": "FastAPI"})
+    return templates.TemplateResponse("home.html", {"request": request, "name": "Home"})
 
 
-@app.get("/category/", tags=['all_category'])
-async def get_all_category(db: Session = Depends(get_db)):
+@app.get("/category/", tags=['all_category'], response_class=HTMLResponse)
+async def get_all_category(request: Request, db: Session = Depends(get_db)):
     category = crud.get_all_category(db)
     if category is None:
         raise HTTPException(status_code=400, detail="Category not found ERROR")
-    return category
+    return templates.TemplateResponse("assort.html", {"request": request, "name": "category", "category": category})
 
 
 @app.get("/category/{cat_id}/items/", tags=['all_in_one_category'])
