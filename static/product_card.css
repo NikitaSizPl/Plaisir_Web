@@ -1,0 +1,60 @@
+.product-container {
+    display: flex; /* Используем flexbox для размещения карточек в строку */
+    flex-wrap: wrap; /* Позволяем карточкам переноситься на новую строку при необходимости */
+    gap: 30px; /* Отступы между карточками */
+    justify-content: space-between; /* Распределяем карточки по доступному пространству */
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px; /* Ширина карточки */
+    width: calc(28% - 25px); /* Три карточки в строке с учетом отступов */
+    margin: 37px; /* Отступы между карточками */
+    transition: transform 0.2s; /* Эффект при наведении */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Увеличение карточки при наведении */
+}
+
+.product-image {
+    width: 100%; /* Заполнение ширины родительского контейнера */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+}
+
+.product-info {
+    padding: 16px; /* Отступы внутри карточки */
+}
+
+.product-name {
+    font-size: 1.5em; /* Размер шрифта для названия */
+    margin: 0; /* Убираем отступы по умолчанию */
+}
+
+.product-description {
+    font-size: 1em; /* Размер шрифта для описания */
+    color: #666; /* Цвет текста */
+}
+
+.product-price {
+    font-size: 1.25em; /* Размер шрифта для цены */
+    color: #333; /* Цвет текста для цены */
+    margin: 10px 0; /* Отступы вокруг цены */
+}
+
+.buy-button {
+    background-color: #28a745; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Закругленные углы */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    cursor: pointer; /* Изменение курсора при наведении */
+    font-size: 1em; /* Размер шрифта для кнопки */
+}
+
+.buy-button:hover {
+    background-color: #218838; /* Темнее при наведении */
+}
