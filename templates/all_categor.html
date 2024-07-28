@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %} Ассортимент {% endblock %}
+
+{% block content %}
+
+
+{% for one_category in category %}
+<div class="cat-cont">
+    <div class="cat-c">
+        <img src="{{ one_category.images_url }}{{ one_category.images_id }}.jpg" alt="Product Image" class="cat-im">
+        <div class="cat-in">
+            <h2 class="cat-na">{{ one_category.name }}</h2>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+
+{% endblock %}
