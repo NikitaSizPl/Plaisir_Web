@@ -4,13 +4,13 @@
 
 {% block content %}
 
+{% if only_one_item_id %}
 <div class="item-cont">
-   {% if only_one_item_id %}
-    <div> <!-- Отображаем фотографии товара -->
-         <img src="{{ only_one_item_id.images_url }}{{ only_one_item_id.name }}.jpg" alt="Product Image" class="product-image">
+    <div class="item-cont-images"> <!-- Отображаем фотографии товара -->
+         <img src="{{ only_one_item_id.images_url }}{{ only_one_item_id.name }}.jpg" alt="Product Image" class="item-images">
     </div>
 
-    <div>
+    <div class="item-info">
         <h1>{{ only_one_item_id.name }}</h1>  <!-- Отображаем имя товара -->
         <p>{{ only_one_item_id.description }}</p> <!-- Отображаем описания товара -->
         <p>only_one_item_id.innader_info</p> <!-- Отображаем доп информации товара -->
@@ -19,8 +19,8 @@
 
    {% else %}
        <p>Товар не найден.</p>
-   {% endif %}
 </div>
+{% endif %}
 
 
 {% endblock %}

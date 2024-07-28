@@ -1,0 +1,43 @@
+.item-cont {
+    display: flex;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item-cont-images {
+    flex: 0 0 40%; /* Фиксированная ширина для изображения (40% от контейнера) */
+    padding: 10px;
+}
+
+
+.item-images {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.item-info {
+    flex: 2;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.item-info p:last-child {
+    font-weight: bold;
+    font-size: 20px;
+    color: #28a745; /* Цвет для цены товара */
+}
