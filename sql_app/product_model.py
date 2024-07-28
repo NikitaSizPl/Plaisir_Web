@@ -20,6 +20,11 @@ class Item(Base):
     description = Column(String)
     price = Column(Integer, nullable=False)
     in_stock = Column(Boolean, default=True)
+    images_id = Column(Integer)
+    images_url = Column(String)
+    innader_info = Column(String)
+
+    # сделать имя категории
     #  Зависимость таблицы к классу "Product"
     category_id = Column(Integer, ForeignKey('categories.id'))
     category = relationship("Category", back_populates="items")
