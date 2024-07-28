@@ -2,7 +2,10 @@
     display: flex; /* Используем flexbox для размещения карточек в строку */
     flex-wrap: wrap; /* Позволяем карточкам переноситься на новую строку при необходимости */
     gap: 30px; /* Отступы между карточками */
-    justify-content: space-between; /* Распределяем карточки по доступному пространству */
+    justify-content: space-around; /* Выравнивание карточек по началу контейнера */
+    margin-top: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
 }
 
 .product-card {
@@ -20,9 +23,11 @@
     transform: scale(1.05); /* Увеличение карточки при наведении */
 }
 
-.product-image {
-    width: 100%; /* Заполнение ширины родительского контейнера */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
+.pro-img {
+    text-align: center;
+    width: 260px; /* Фиксированная ширина для изображения */
+    height: 300px; /* Фиксированная высота для изображения */
+    object-fit: cover;
 }
 
 .product-info {
@@ -32,17 +37,24 @@
 .product-name {
     font-size: 1.5em; /* Размер шрифта для названия */
     margin: 0; /* Убираем отступы по умолчанию */
+    text-align: center; /* Выравнивание текста по правой стороне */
 }
 
 .product-description {
     font-size: 1em; /* Размер шрифта для описания */
     color: #666; /* Цвет текста */
+    text-align: right; /* Выравнивание текста по правой стороне */
 }
 
 .product-price {
     font-size: 1.25em; /* Размер шрифта для цены */
     color: #333; /* Цвет текста для цены */
     margin: 10px 0; /* Отступы вокруг цены */
+    text-align: right; /* Выравнивание текста по правой стороне */
+}
+
+.buy-button-container{
+    display: grid;
 }
 
 .buy-button {

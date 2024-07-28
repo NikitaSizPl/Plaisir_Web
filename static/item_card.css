@@ -39,5 +39,4 @@ p {
 .item-info p:last-child {
     font-weight: bold;
     font-size: 20px;
-    color: #28a745; /* Цвет для цены товара */
 }
