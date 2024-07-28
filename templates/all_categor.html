@@ -5,16 +5,21 @@
 {% block content %}
 
 
-{% for one_category in category %}
 <div class="cat-cont">
+    {% for one_category in category %}
     <div class="cat-c">
-        <img src="{{ one_category.images_url }}{{ one_category.images_id }}.jpg" alt="Product Image" class="cat-im">
+        <a href="/category/{{one_category.id}}/items">
+            <img src="{{ one_category.images_url }}{{ one_category.images_id }}.jpg" alt="Product Image" class="cat-im">
+        </a>
+
         <div class="cat-in">
-            <h2 class="cat-na">{{ one_category.name }}</h2>
+            <a href="/category/{{one_category.id}}/items">
+                <h2 class="cat-na">{{ one_category.name }}</h2>
+            </a>
         </div>
     </div>
+    {% endfor %}
 </div>
-{% endfor %}
 
 
 {% endblock %}

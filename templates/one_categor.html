@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %} Ассортимент {% endblock %}
+
+{% block content %}
+
+    <div class="product-container">
+        {% for one in only_one_category %}
+    <div class="product-card">
+        <a href="/category/{{one.category_id}}/items/{{one.id}}">
+            <img src="{{one.images_url}}{{one.images_id}}.jpg" alt="Product Image" class="pro-img">
+        </a>
+
+        <div class="product-info">
+            <a href="/category/{{one.category_id}}/items/{{one.id}}">
+                <h2 class="product-name">{{ one.name }}</h2>
+            </a>
+        </div>
+    </div>
+            {% endfor %}
+    </div>
+
+{% endblock %}
