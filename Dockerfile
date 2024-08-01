@@ -1,20 +1,20 @@
-# Use an official Python runtime as a parent image
+# Используем официальный образ Python
 FROM python:3.12
 
-# Set the working directory in the container
+# Устанавливаем рабочую директорию
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY . /app
+# Копируем файл зависимостей в контейнер
+COPY requirements.txt .
 
-# Install any needed packages specified in requirements.txt
+# Устанавливаем зависимости
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make port 80 available to the world outside this container
-EXPOSE 80
+# Копируем все файлы приложения в контейнер
+COPY . .
 
-# Define environment variable
-ENV NAME World
+# Указываем, что приложение будет слушать на порту 8000
+EXPOSE 8000
 
-# Run app.py when the container launches
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
+# Запускаем приложение с использованием uvicorn
+CMD ["uvicorn", "sql_app/main:app", "--host", "0.0.0.0", "--port", "8000"]
