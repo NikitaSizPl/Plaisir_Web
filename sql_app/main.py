@@ -56,6 +56,7 @@ async def read_product_by_id(request: Request, cat_id: int, item_id: int, db: Se
     return templates.TemplateResponse(
         "item.html", {"request": request, "name": "item", "only_one_item_id": only_one_item_id})
 
+
 @app.get("/contact", tags=['contact'], response_class=HTMLResponse)
 async def get_contact(request: Request):
     return templates.TemplateResponse(
