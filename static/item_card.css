@@ -1,6 +1,6 @@
-.item-cont {
+.item-doker {
     display: flex;
-    margin: 20px;
+    margin: 30px 50px;
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
@@ -16,27 +16,40 @@
 .item-images {
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
 }
 
 .item-info {
     flex: 2;
-    padding: 10px;
+    padding: 40px;
     background-color: #f9f9f9;
 }
 
-h1 {
+.item_name {
+    font-size: 36px;
+    color: #333;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.item_title {
+    font-size: 20px;
+    color: black;
+    margin: 70px 0;
+    white-space: break-spaces;
+}
+
+.item_inader{
+    margin: 70px 0;
+    white-space: pre;
+}
+
+.item_price{
     font-size: 24px;
     color: #333;
-}
-
-p {
-    font-size: 16px;
-    color: #666;
-    margin: 5px 0;
-}
-
-.item-info p:last-child {
-    font-weight: bold;
-    font-size: 20px;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
