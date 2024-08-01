@@ -1,7 +1,20 @@
 {% extends "base.html" %}
 {% block title %} Главная {% endblock %}
-<div>
-    {% block content %}
-    <p>HOME</p>
-    {% endblock %}
+
+{% block content %}
+
+<div class="home">
+    <div class="left-home">
+        <h3 style="margin-left: 17px">Кондитерская</h3>
+        <img class="img-left" src="static/images/logo2.png">
+        <p style="margin: 70px 0px 0px 10px; line-height: 2;">Наши макаронки и торты самые лучшие в городе. <br>Все продукты изготовлены из натуральных ингредиентов<br> без ароматизаторов, красителей и консервантов. </p>
+    </div>
+
+    <div class="right-home">
+        <img class="img-home" src="static/images/tort-home1.png">
+
+    </div>
 </div>
+
+{% endblock %}
+

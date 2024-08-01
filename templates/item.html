@@ -5,18 +5,19 @@
 {% block content %}
 
 {% if only_one_item_id %}
-<div class="item-cont">
+<div class="item-doker">
     <div class="item-cont-images"> <!-- Отображаем фотографии товара -->
-         <img src="{{ only_one_item_id.images_url }}{{ only_one_item_id.images_id }}.jpg" alt="Product Image" class="item-images">
+         <img class="item-images" src="{{ only_one_item_id.images_url }}{{ only_one_item_id.images_id }}.jpg" alt="Product Image">
     </div>
 
     <div class="item-info">
-        <h1>{{ only_one_item_id.name }}</h1>  <!-- Отображаем имя товара -->
-        <p>{{ only_one_item_id.description }}</p> <!-- Отображаем описания товара -->
-        <p>{{only_one_item_id.innader_info}}</p> <!-- Отображаем доп информации товара -->
-        <p>{{ only_one_item_id.price }}</p> <!-- Отображаем цены товара -->
-    </div>
+        <h1 class="item_name">{{ only_one_item_id.name }}</h1>  <!-- Отображаем имя товара -->
+        <p class="item_title">{{ only_one_item_id.description }}</p> <!-- Отображаем описания товара -->
+        {% if not only_one_item_id.category_id == 2 %}
+        <p class="item_inader">{{only_one_item_id.innader_info}}</p> <!-- Отображаем доп информации товара -->
+        {% endif %}
 
+    </div>
    {% else %}
        <p>Товар не найден.</p>
 </div>
