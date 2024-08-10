@@ -17,9 +17,31 @@
 
     .nav-links.active {
     display: flex;
+    align-items: center;
     }
 
     .burger {
     display: flex;
     }
+
+    .home{
+    flex-direction: column;
+    }
+
+    .left-home{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    }
+
+    .left-home p {
+    font-size: 18px;
+    }
+
+    .right-home{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    }
+
 }
