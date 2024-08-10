@@ -1,0 +1,25 @@
+/* Адаптация под планшеты устройства */
+@media (max-width: 768px){
+    .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    }
+
+    .nav-links li{
+    margin: 15px;
+    }
+
+
+    .nav-links.active {
+    display: flex;
+    }
+
+    .burger {
+    display: flex;
+    }
+}

@@ -4,29 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} {% endblock %}</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/static/styles.css">
     <link rel="stylesheet" href="/static/product_card.css">
     <link rel="stylesheet" href="/static/categoria_card.css">
     <link rel="stylesheet" href="/static/item_card.css">
     <link rel="stylesheet" href="/static/contact.css">
     <link rel="stylesheet" href="/static/home.css">
+    <link rel="stylesheet" href="/static/adaptic_styles.css">
+
 </head>
 
 <body>
 
 <header>
-    <div class="logo">
 
-    </div>
-    <nav>
-        <ul class="navbar">
-            <li><a href="/">Главная</a></li>
-            <li><a href="/category">Ассортимент</a></li>
-            <li><a href="#services">О нас</a></li>
-            <li><a href="/contact">Контакты</a></li>
+<nav class="navbar">
+        <div class="burger" id="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/category">Ассортимент</a></li>
+                <li><a href="#services">О нас</a></li>
+                <li><a href="/contact">Контакты</a></li>
         </ul>
     </nav>
+    <script src="/static/scripts/adapt.js"></script>
+
 </header>
 
 <main>

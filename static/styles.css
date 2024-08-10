@@ -1,44 +1,47 @@
 /* Общие стили для шапки */
 header {
-    background-color: #FFFFFF; /* Темный фон */
+    background-color: #FFFFFF; /* Белый фон */
     padding: 20px; /* Отступы вокруг содержимого */
-    color: black; /* Белый цвет текста */
+    color: black; /* Черный цвет текста */
     display: flex; /* Используем flexbox для выравнивания */
-    justify-content: space-between; /* Распределяем элементы по краям */
-    align-items: center; /* Вертикальное выравнивание по центру */
+    justify-content: flex-end;
 }
 
-/* Стили для навигационного меню */
 .navbar {
-    list-style: none; /* Убираем маркеры списка */
-    display: flex; /* Используем flexbox для горизонтального отображения */
-    gap: 60px; /* Расстояние между элементами меню */
-    margin-right: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
 }
 
-.navbar li {
-    display: inline; /* Отображаем элементы списка в строку */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-.navbar a {
-    text-decoration: none; /* Убираем подчеркивание текста */
-    color: black; /* Белый цвет текста для ссылок */
-    transition: color 0.3s; /* Плавный переход цвета при наведении */
+.nav-links li {
+    margin: 0 30px;
 }
 
-.navbar a:hover {
-    color: #f0a500; /* Изменяем цвет при наведении */
+.nav-links a {
+    color: black;
+    text-decoration: none;
 }
 
-/* Логотип (если есть) */
-.logo-images  {
-    width: 100%; /* Ширина изображения 100% относительно родителя */
-    height: auto; /* Высота автоматически, чтобы сохранить пропорции */
-    max-width: 120px; /* Ограничение максимальной ширины для лого */
-    max-height: 80px; /* Ограничение максимальной высоты для лого */
-    object-fit: cover; /* Заполнение пространства, обрезая изображение, если это необходимо */
-    margin-left: 45px;
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.line {
+    height: 3px;
+    width: 25px;
+    background-color: black;
+    margin: 4px 0;
 }
 
 
-   
