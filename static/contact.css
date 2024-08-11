@@ -1,27 +1,44 @@
 .contact-dok {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;    /* Центрирование по вертикали */
-    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
     margin: 40px 0px;
-}
+    }
+
+.cont-maps{
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.img-cont{
+    max-width: 100%;
+    height: auto;
+    }
 
 .cont-info{
+    padding: 10px;
+    flex: 1;
+    width: 630px;
+    height: 435px;
+    }
 
-}
-
-
-.info {
+.cont-info h1{
     display: flex;
-}
+    justify-content: center;
+    }
 
-.block {
-    width: 200px; /* Ширина каждого блока */
-    height: 100px; /* Высота каждого блока */
-    margin: 50px; /* Отступы между блоками */
-    background-color: #f0f0f0; /* Цвет фона блоков */
-    border: 1px solid #ccc; /* Обводка блоков */
-    display: flex; /* Используем флексбокс для центрирования содержимого */
-    align-items: center; /* Центрируем содержимое по вертикали */
-    justify-content: center; /* Центрируем содержимое по горизонтали */
+.cont-info p{
+    line-height: 40px;
+    margin-left: 30px;
 }
+.color-one{
+    font-weight: 600
+}
+.cont-info a{
+    color: black;
+    margin-left: 30px;
+    }

@@ -14,7 +14,6 @@
     margin: 15px;
     }
 
-
     .nav-links.active {
     display: flex;
     align-items: center;
@@ -40,8 +39,68 @@
 
     .right-home{
     text-align: center;
-    width: 100%;
     padding: 10px;
     }
 
+    .item-doker{
+    flex-direction: column;
+    }
+
+    .item-cont-images{
+    text-align: center;
+    width: 100%;
+    margin: 10px
+    }
+
+    .item-images {
+    max-width: 90%;
+    height: auto;
+    }
+
+    .item-info {
+    text-align: center;
+    width: 95%;
+    padding: 10px;
+    }
+
+    .item_name{
+    justify-content: center;2
+    }
+
+    .item_title{
+    width: 100%;
+    padding: 10px;
+    line-height: 30px;
+    }
+
+    .item_inader{
+    white-space: pre-wrap;
+    line-height: 30px;
+    }
+
+    .contact-dok{
+    flex-direction: column;
+    }
+
+    .cont-maps{
+    text-align: center;
+    width: 100%;
+    margin: 10px;
+    }
+
+    .img-cont{
+    max-width: 100%;
+    height: auto;
+    }
+
+    .cont-info{
+    text-align: center;
+    width: 95%;
+    padding: 10px;
+    }
+
+    .cont-info p{
+    margin: 0px;
+    line-height: 40px;
+    }
 }
