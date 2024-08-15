@@ -23,7 +23,11 @@ header {
 }
 
 .nav-links li {
-    margin: 0 30px;
+    margin: 0 40px;
+}
+
+.doker-span{
+    display: none;
 }
 
 .nav-links a {
@@ -45,3 +49,7 @@ header {
 }
 
 
+.doker-global {
+    display: flex;
+    margin-left: 3em;
+}
