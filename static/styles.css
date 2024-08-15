@@ -48,8 +48,34 @@ header {
     margin: 4px 0;
 }
 
-
 .doker-global {
     display: flex;
     margin-left: 3em;
+    cursor: pointer;
+    position: relative;
+}
+
+.doker-span {
+    display: none; /* Скрыто по умолчанию */
+    /*position: absolute; /* Позволяет разместить его под doker-span */
+    top: 100%; /* Позиционирование сразу под элементом */
+    left: 0; /* Смещает меню по горизонтали влево */
+    background-color: #fff; /* Цвет фона */
+    border: 1px solid #ccc; /* Рамка */
+    z-index: 1000; /* Должно быть поверх других элементов */
+    padding: 5px; /* Добавляет внутренний отступ к выпадающему меню */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.doker-span span{
+    margin: 30px 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.doker-span.active {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    display: block;
 }
