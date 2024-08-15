@@ -49,33 +49,37 @@ header {
 }
 
 .doker-global {
-    display: flex;
-    margin-left: 3em;
     cursor: pointer;
     position: relative;
-}
+    display: flex;
+    font-size: 24px;
+    margin: 0px 40px;
+
+    }
 
 .doker-span {
-    display: none; /* Скрыто по умолчанию */
-    /*position: absolute; /* Позволяет разместить его под doker-span */
-    top: 100%; /* Позиционирование сразу под элементом */
-    left: 0; /* Смещает меню по горизонтали влево */
-    background-color: #fff; /* Цвет фона */
-    border: 1px solid #ccc; /* Рамка */
-    z-index: 1000; /* Должно быть поверх других элементов */
-    padding: 5px; /* Добавляет внутренний отступ к выпадающему меню */
+    display: none; /* Изначально скрыто */
+    position: absolute; /* Позволяет разместить его под doker-span */
+    top: 10%; /* Позиционирование сразу под элементом */
+    left: 90%; /* Позиционирование по центру */
+    transform: translateX(-8%); /* Центрирование относительно самой иконки */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    padding: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px; /* Закругление углов */
+    transition: all 0.3s ease; /* Анимация появления */
+    }
 
-}
-
-.doker-span span{
-    margin: 30px 30px;
+.doker-span span {
+    padding: 20px 20px;
+    cursor: pointer;
     display: flex;
     justify-content: center;
-}
+    }
 
 .doker-span.active {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    display: block;
-}
+    display: flex;
+    flex-direction: column;
+    }
