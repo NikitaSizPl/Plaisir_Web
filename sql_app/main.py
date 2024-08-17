@@ -61,9 +61,3 @@ async def read_product_by_id(request: Request, cat_id: int, item_id: int, db: Se
 async def get_contact(request: Request):
     return templates.TemplateResponse(
         "contact.html", {"request": request, "name": "contact"})
-
-
-@app.get("/deliveri", tags=['deliveri'], response_class=HTMLResponse)
-async def get_contact(request: Request):
-    return templates.TemplateResponse(
-        "deliveri.html", {"request": request, "name": "deliveri"})
