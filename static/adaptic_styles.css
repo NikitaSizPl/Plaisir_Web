@@ -1,5 +1,10 @@
 /* Адаптация под планшеты устройства */
 @media (max-width: 768px){
+
+    .navbar{
+    flex-direction: row-reverse;
+    }
+
     .nav-links {
     display: none;
     flex-direction: column;
@@ -12,6 +17,10 @@
 
     .nav-links li{
     margin: 15px;
+    }
+
+    .doker-span.active{
+    left: 78%;
     }
 
     .nav-links.active {
@@ -33,10 +42,14 @@
     flex-direction: column;
     }
 
-    .left-home{
+    .left-home {
     text-align: center;
     width: 100%;
     padding: 10px;
+    }
+
+    .left-home div{
+    margin: 0px;
     }
 
     .left-home p {
@@ -108,5 +121,23 @@
     .cont-info p{
     margin: 0px;
     line-height: 40px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px){
+    .doker-span.active{
+    left: 86%;
+    }
+}
+
+@media (max-width: 426px){
+    .doker-span.active{
+    left: 60%;
+    }
+}
+
+@media (max-width: 375px){
+    .doker-span.active{
+    left: 54%;
     }
 }
