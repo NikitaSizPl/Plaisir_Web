@@ -1,34 +1,42 @@
+body {
+    background-image: url(/static/images/background2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    margin: 0;
+    background-attachment: fixed;
+    }
+
 .home {
     display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 30px;
-}
+    }
 
 .left-home{
     flex: 1;
     padding: 20px;
     border-radius: 20px;
     margin: 50px;
-}
+    }
 
 .left-home div{
     margin-bottom: 20px;
     font-size: 22px;
     margin-left: 20px;
-}
+    }
 
 .img-left{
     max-width: 45%;
     height: auto;
     margin: 10px 0px;
-}
+    }
 
 .left-home p{
     font-size: 17px; /* Кегиль */
     line-height: 2; /* Расстояние между словами вертикально */
     margin-left: 12px;
-}
+    }
 
 .right-home{
     flex: 1;
