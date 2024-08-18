@@ -33,6 +33,7 @@
 .cat-in {
     padding: 25px 15px; /* Отступ внутри карточки */
     text-align: center; /* Центрируем текст */
+    background: ghostwhite; /* Цвет зад фон текста */
     }
 
 .cat-na {

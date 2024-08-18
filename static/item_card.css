@@ -22,7 +22,7 @@
 .item-info {
     flex: 1;
     padding: 40px;
-    background-color: #f9f9f9;
+    background: ghostwhite;
 }
 
 .item_name {
