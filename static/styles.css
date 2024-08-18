@@ -1,11 +1,12 @@
 /* Общие стили для шапки */
+
 header {
     background-color: #FFFFFF; /* Белый фон */
     padding: 20px; /* Отступы вокруг содержимого */
     color: black; /* Черный цвет текста */
     display: flex; /* Используем flexbox для выравнивания */
     justify-content: flex-end;
-}
+    }
 
 .navbar {
     display: flex;
