@@ -3,6 +3,7 @@ from .database import Base
 from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
 
 
+
 class Category(Base):
     __tablename__ = "categories"
 

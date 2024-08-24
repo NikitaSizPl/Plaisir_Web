@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Открытие/ закрытие по нажатию на меню
     burger.addEventListener('click', (event) => {
         navLinks.classList.toggle('active');
+
         event.stopPropagation();
         });
 
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Открытие/ закрытие по нажатию на меню
     dokglobal.addEventListener('click', (event) => {
         dokspan.classList.toggle('active');
+
         event.stopPropagation();
     });
 
