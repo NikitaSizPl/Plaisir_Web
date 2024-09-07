@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="doker">
+
+    <div class="left">
+        <span>картинка/ картинки что покупаетль заказал</span>
+    </div>
+    <br>
+    <div class="right-doker">
+
+        <div class="info">
+            <label for="fname">ФИО:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="phone">Телефон:</label><br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+            <label for="instagram">Instagram:</label><br>
+            <input type="text" id="instagram" name="instagram"><br>
+            <label for="telegram">Telegram:</label><br>
+            <input type="text" id="telegram" name="telegram"><br>
+        </div>
+<br>
+        <div class="deliveri">
+            <input type="radio" id="contactdeliveri1" name="deliveri" value="yourself" />
+            <label for="contactdeliveri1">Самовывоз</label><br>
+
+            <input type="radio" id="contactdeliveri2" name="deliveri" value="deliveriсity" />
+            <label for="contactdeliveri2">Доставка по городу</label><br>
+
+            <input type="radio" id="contactdeliveri3" name="deliveri" value="deliverioutсity" />
+            <label for="contactdeliveri3">Доставка за городом</label><br>
+        </div>
+<br>
+        <div class="pay">
+            <input type="radio" id="contactPay1" name="pay" value="yourself" />
+            <label for="contactPay1">Оплата наличными</label><br>
+
+            <input type="radio" id="contactPay2" name="pay" value="deliveriсity" />
+            <label for="contactPay2">Оплата картой при получении</label><br>
+
+            <input type="radio" id="contactPay3" name="pay" value="deliverioutсity" />
+            <label for="contactPay3">Оплата картой</label><br>
+        </div>
+        <br>
+        <div class="comment">
+            <label for="comment">Комментарий к заказу:</label><br>
+            <input
+                    type="text"
+                    id="comment"
+                    name="comment"
+                    required minlength="4"
+                    maxlength="3000"
+                    size="50"
+                    placeholder="Не больше 3000 символов"/>
+        </div>
+    </div>
+<br>
+    <div class="btnofer">
+        <button name="ofer">Заказать</button>
+    </div>
+
+</div>
+</body>
+</html>
