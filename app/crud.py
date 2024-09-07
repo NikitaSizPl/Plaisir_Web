@@ -1,6 +1,7 @@
 from sqlalchemy.orm import Session
 
-from .product_model import Category, Item
+from .models.product_model import Category, Item
+
 
 def get_all_category(db: Session):
     return db.query(Category).all()
